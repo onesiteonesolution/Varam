@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VARAM Soft Tech</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+            color: #333;
+        }
+        header {
+            background-color: #005f73;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            height: 60px;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+            animation: fadeIn 1s ease-in;
+        }
+        h2 {
+            color: #005f73;
+            border-bottom: 2px solid #94d2bd;
+            padding-bottom: 10px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.02);
+        }
+        .collapsible {
+            background-color: #94d2bd;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .active, .collapsible:hover {
+            background-color: #0a9396;
+        }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #e9f5f2;
+        }
+        footer {
+            background-color: #005f73;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://via.placeholder.com/150x60?text=VARAM+Logo" alt="VARAM Logo">
+    <h1>VARAM Soft Tech</h1>
+    <p>Value Addition for Research And Manufacturing</p>
+</header>
+
+<section>
+    <h2>Company Overview</h2>
+    <div class="card">
+        <p>VARAM is a specialized IT solutions provider dedicated to transforming the pharmaceutical industry through innovative, intelligent, and compliant digital technologies. We deliver tailored solutions that drive operational excellence, regulatory compliance, and scientific advancement.</p>
+    </div>
+
+    <h2>Vision & Mission</h2>
+    <div class="card">
+        <h3>Our Vision</h3>
+        <p>To be the most trusted technology partner for pharmaceutical innovation, enabling smarter research, safer manufacturing, and faster delivery of life-saving solutions through intelligent digital transformation.</p>
+        <h3>Our Mission</h3>
+        <ul>
+            <li>Deliver value-driven IT solutions that empower pharmaceutical companies.</li>
+            <li>Build compliant, scalable, and secure platforms.</li>
+            <li>Foster collaboration and innovation through advanced technologies.</li>
+            <li>Support operational excellence and patient safety.</li>
+        </ul>
+    </div>
+
+    <h2>About Us</h2>
+    <div class="card">
+        <p>VARAM is a next-generation IT company focused exclusively on delivering transformative digital solutions to the pharmaceutical industry. We empower pharma organizations to innovate, streamline, and scale through intelligent technology.</p>
+    </div>
+
+    <h2>Services</h2>
+    <button class="collapsible">Electronic Batch Record (EBR) Systems</button>
+    <div class="content">
+        <p>Digitize and streamline your manufacturing processes with our robust EBR solutions. We help pharma companies transition from paper-based batch records to fully electronic systems that ensure:</p>
+        <ul>
+            <li>Real-time data capture and validation</li>
+            <li>Compliance with FDA 21 CFR Part 11 and EU Annex 11</li>
+            <li>Reduced batch release times</li>
+            <li>Enhanced traceability and audit readiness</li>
+        </ul>
+    </div>
+
+    <h2>Contact Us</h2>
+    <div class="card">
+        <p>Email: contact@varamtech.com</p>
+        <p>Phone: +91 9000122742</p>
+        <p>Website: www.varamtech.com</p>
+        <p>Address: VARAM Technologies Pvt. Ltd., PharmaTech Innovation Park, Hyderabad, Telangana, India – 500032</p>
+        <p>Business Hours: Monday to Friday: 9:00 AM – 6:00 PM IST</p>
+        <p>Follow Us: LinkedIn | Twitter</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 VARAM Technologies Pvt. Ltd. All rights reserved.</p>
+</footer>
+
+<script>
+    const collapsibles = document.querySelectorAll(".collapsible");
+    collapsibles.forEach(btn => {
+        btn.addEventListener("click", function() {
+            this.classList.toggle("active");
+            const content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
